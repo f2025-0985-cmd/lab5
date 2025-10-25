@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    float seconds;
+
+    cout << "Enter number of seconds: ";
+    cin >> seconds;
+
+    if (seconds >= 86400) {
+        float days = seconds / 86400.0;
+        cout << "Days: " << days << endl;
+    }
+    else if (seconds >= 3600) {
+        float hours = seconds / 3600.0;
+        cout << "Hours: " << hours << endl;
+    }
+    else if (seconds >= 60) {
+        float minutes = seconds / 60.0;
+        cout << "Minutes: " << minutes << endl;
+    }
+    else {
+        cout << "Seconds: " << seconds << endl;
+    }
+
+    return 0;
+}
