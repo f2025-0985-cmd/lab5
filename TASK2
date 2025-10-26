@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string color1, color2;
+
+    cout << "Enter the first primary color (red, blue, yellow): ";
+    cin >> color1;
+
+    cout << "Enter the second primary color (red, blue, yellow): ";
+    cin >> color2;
+
+    if ((color1 == "red" || color1 == "blue" || color1 == "yellow") &&
+        (color2 == "red" || color2 == "blue" || color2 == "yellow")) {
+        
+        if (color1 == color2) {
+            cout << "You entered the same colors! The result is " << color1 << "." << endl;
+        } 
+        else if (color1 == "red") {
+            if (color2 == "blue")
+                cout << "When you mix red and blue, you get purple." << endl;
+            else if (color2 == "yellow")
+                cout << "When you mix red and yellow, you get orange." << endl;
+        } 
+        else if (color1 == "blue") {
+            if (color2 == "red")
+                cout << "When you mix blue and red, you get purple." << endl;
+            else if (color2 == "yellow")
+                cout << "When you mix blue and yellow, you get green." << endl;
+        } 
+        else if (color1 == "yellow") {
+            if (color2 == "red")
+                cout << "When you mix yellow and red, you get orange." << endl;
+            else if (color2 == "blue")
+                cout << "When you mix yellow and blue, you get green." << endl;
+        }
+    } 
+    else {
+        cout << "Error: You must enter only primary colors (red, blue, yellow)." << endl;
