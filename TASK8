@@ -1,0 +1,30 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int age, activities;
+    double fee = 0.0;
+
+    cout << "Enter your age: ";
+    cin >> age;
+
+    cout << "Enter number of activities attended: ";
+    cin >> activities;
+
+    // Determine membership fee based on age group
+    if (age < 18) {
+        fee = 500 + (activities * 20);
+    }
+    else if (age <= 50) {
+        fee = 1000 + (activities * 30);
+    }
+    else {
+        fee = 700 + (activities * 15);
+    }
+
+    cout << fixed << setprecision(2);
+    cout << "Total membership fee: $" << fee << endl;
+
+    return 0;
+}
